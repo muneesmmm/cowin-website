@@ -5,18 +5,44 @@
   <title>COWIN vaccin finder</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="jQuery/jquery-ui.min.css">
   <script src="jQuery/jquery-ui.min.js"></script>
+  <style>
+    input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #2d9fd9;
+     color: #a0d18c;
+     width: 250px;
+     height: 30px;
+     padding-left: 10px;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid #a0d18c;
+     color: #2d9fd9;
+}
+  </style>
 
 </head>
 
 <body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+      <img src="./vF.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      Co-Vaccine finder
+    </a>
+  </nav>
   <div>
-    <img style="background-size:cover ;width: 100%;"
-      src="https://in.bmscdn.com/nmcms/events/banner/desktop/media-desktop-amri-vaccination-drive-acropolis-mall-0-2021-6-16-t-15-50-50.jpg"
+    <img style="background-size:cover ;width: 100%"
+      src="./banner.png"
       alt="">
   </div>
   
@@ -28,7 +54,7 @@
        </div>
     <div class="form-group">
       <label for="pin">Search by PIN:</label>
-      <input type="number" class="form-control" id="pin" maxlength="6" minlength="6" placeholder="Enter PIN" name="pin">
+      <input type="text" id="pin" maxlength="6" minlength="6" placeholder="Enter PIN" name="pin">
     </div>
     
    
