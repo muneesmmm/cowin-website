@@ -103,7 +103,9 @@
                 age = "18"
               }
               console.log(age);
+              if(resultData.available_capacity > 0 || resultData.available_capacity  ){
               $('#sessions tbody').append('<tr class="child"><td>' + resultData.name + '</td><td>' + resultData.available_capacity + '</td><td>' + age + '</td><td>' + resultData.available_capacity_dose1 + '</td><td>' + resultData.available_capacity_dose2 + '</td><td>' + resultData.vaccine + '</td><td>' + resultData.fee_type + '</td></tr>');
+            }
             }
           }
         });
