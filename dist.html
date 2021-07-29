@@ -94,8 +94,10 @@
       <!-- Footer -->
       <script>
         $(document).ready(function () {
+          $("#sessions").hide()
           $("#datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
           $("#button1").click(function () {
+            $("#sessions").show()
             var dates = $("#datepicker").val()
             var dist = $('#state').find(":selected").val();
             if (dist == '' || dist == undefined) {

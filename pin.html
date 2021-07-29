@@ -87,8 +87,10 @@
     <script>
 
       $(document).ready(function () {
+        $("#sessions").hide()
         $("#datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
         $("#button").click(function () {
+          $("#sessions").show()
           var dates = $("#datepicker").val()
           var pin = $('#pin').val();
           if (pin == '' || pin == undefined) {
