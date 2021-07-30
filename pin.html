@@ -31,7 +31,7 @@
       <h2>Check Your Nearest Vaccination Center And Slots Availability</h2>
       <div class="form-group">
         <label for="date">Date :</label>
-        <input type="text" name="date" id="datepicker">
+        <input type="text" name="date" id="datepicker" placeholder="dd-mm-yy">
       </div>
       <div class="form-group">
         <label for="pin">Search by PIN:</label>
@@ -62,8 +62,8 @@
     </div>
     <div class="container p-5" style="display: flex;justify-content: center; ">
       <a href="https://selfregistration.cowin.gov.in/"> <img src="./button.png" style="height: 50px;height: 100px;"
-          alt=""></a><br><input type="text" id="ph" name="ph"><br>
-      <button type="button" id="reg">register now</button>
+          alt=""></a>
+
     </div>
     <!-- Footer -->
     <footer class="bg-dark text-center fixed-bottom  ">
@@ -88,28 +88,6 @@
     <script>
 
       $(document).ready(function () {
-        $("#reg").click(function () {
-          var phone = $("#ph").val()
-          // var item={"mobile":"9645732562"}
-          // console.log(phone);
-          // $.post("https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP",
-          // {"mobile":"9645732562"},
-          //   function (data, status) {
-          //     alert("Data: " + data + "\nStatus: " + status);
-          //   });
-          $.post('https://cdn-api.co-vin.in/api/v2/auth/public/generateOTP',  // url
-          {mobile:phone}, // data to be submit
-            function (data, status, xhr) {   // success callback function
-              alert('status: ' + status + ', data: ' + data.responseData);
-            },
-            'json');
-        });
-        $.post('/submitJSONData',  // url
-          { myData: 'This is my data.' }, // data to be submit
-          function (data, status, xhr) {   // success callback function
-            alert('status: ' + status + ', data: ' + data.responseData);
-          },
-          'json');
         $("#datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
         $("#button").click(function () {
           var dates = $("#datepicker").val()
